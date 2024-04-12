@@ -11,7 +11,7 @@ def caesar_cipher(str, shift_num)
             new_str << alphabet_lower[index + shift_num]
             break;
           else
-            new_str << alphabet_upper[(index + shift_num) - 25 -1]
+            new_str << alphabet_lower[(index + shift_num) - 25 -1]
             break;
           end
         end
@@ -32,7 +32,8 @@ def caesar_cipher(str, shift_num)
       new_str << character
     end
   end
-  puts new_str
+  new_str
 end
 
-caesar_cipher("What a string!", 5)
+puts caesar_cipher("What a string!", 5)
+puts caesar_cipher("xyz", 2)
